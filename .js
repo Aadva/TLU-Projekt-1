@@ -57,25 +57,7 @@ http.createServer(function(req, res){
 			}
 		});	
 	}
-	else if(currentUrl.pathname === "/hobid"){
-    res.writeHead(200, {"Content-type": "text/html; charset=utf-8"});
-    res.write(pageHead);
-    res.write(pageBanner);
-    res.write(pageBody);
-
-    res.write("\n\t<p>Minu hobiks on driftimine, täpsemalt winter drift. Selle kohta saab täpsemalt lugeda <a href='https://en.wikipedia.org/wiki/Drifting_(motorsport)' target='_blank'>siit</a>.</p>");
-    res.write("\n\t<h2>Altpoolt leiab pildid minu eelmisest autost, mida kasutasin ja esimese äparduse.</h2>");
-
-    res.write('<div style="display:flex; gap:10px;">');
-    res.write('<img src="/sierra.jpeg" alt="sierra pilt" width="200">');
-    res.write('<img src="/sierra2.jpeg" alt="teine sierra pilt" width="200">');
-    res.write('</div>');
-
-    res.write(pageFoot);
-    return res.end();
-}
-
-
+	
 	else if(currentUrl.pathname === "/vp_banner_2025_TA.jpg"){
 		//liidame muidu kأ¤ttesaamatu piltide kausta meiue veebi failiteega
 		let bannerPath = path.join(__dirname, "images");
